@@ -11,6 +11,15 @@ public enum UnitGame
     Civil,
     None
 }
+public enum StateAnt
+{
+    EAT,
+    ATTACK,
+    REPRODUCTION,
+    PATROL,
+    EVADE,
+    None
+}
 public class Health : MonoBehaviour
 {
     [Header("imageUI")]
@@ -25,6 +34,9 @@ public class Health : MonoBehaviour
     [Header("AimOffSet")]
     public Transform AimOffset;
     public Health HurtingMe;
+
+    [Header("State")]
+    public StateAnt _StateAnt;
 
     [Header("Type Agent")]
     public TypeAgent typeAgent;

@@ -69,9 +69,12 @@ public class IACharacterVehiculo : IACharacterControl
     public virtual void MoveToEvadEnemy()
     {
         if (AIEye.ViewEnemy == null) return;
+        health._StateAnt = StateAnt.EVADE;
+
         Vector3 dir = (transform.position - AIEye.ViewEnemy.transform.position).normalized;
         Vector3 newPosition = transform.position + dir * 5f;
         MoveToPosition(newPosition);
+        LookPosition(newPosition);
     }
 
 
@@ -85,7 +88,7 @@ public class IACharacterVehiculo : IACharacterControl
     public virtual void MoveToWander()
     {
         if (AIEye.ViewEnemy != null) return;
-
+        health._StateAnt = StateAnt.PATROL;
         float distance = (transform.position - positionWander).magnitude;
 
         if(distance<2)

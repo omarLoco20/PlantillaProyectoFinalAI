@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using BehaviorDesigner.Runtime.Tasks;
 [TaskCategory("MyAI/Move")]
-public class ActionWander : ActionNodeVehicle
+public class ActionEvadeEnemy : ActionNodeVehicle
 {
     public override void OnStart()
     {
@@ -28,22 +28,23 @@ public class ActionWander : ActionNodeVehicle
             case UnitGame.Zombie:
                 if(_IACharacterVehiculo is IACharacterVehiculoZombie)
                 {
-                    ((IACharacterVehiculoZombie)_IACharacterVehiculo).MoveToWander();
-                    
+                    ((IACharacterVehiculoZombie)_IACharacterVehiculo).MoveToEnemy();
+                    ((IACharacterVehiculoZombie)_IACharacterVehiculo).LookEnemy();
                 }
 
-                break;
-            case UnitGame.Soldier:
-                if (_IACharacterVehiculo is IACharacterVehiculoSoldier)
-                {
-                    ((IACharacterVehiculoSoldier)_IACharacterVehiculo).MoveToWander();
-
-                }
                 break;
             case UnitGame.Civil:
                 if (_IACharacterVehiculo is IACharacterVehiculoCivil)
                 {
-                    ((IACharacterVehiculoCivil)_IACharacterVehiculo).MoveToWander();
+                    ((IACharacterVehiculoCivil)_IACharacterVehiculo).MoveToEvadEnemy();
+                   
+                }
+                break;
+            case UnitGame.Soldier:
+                if (_IACharacterVehiculo is IACharacterVehiculoSoldier)
+                {
+                    ((IACharacterVehiculoSoldier)_IACharacterVehiculo).MoveToEvadEnemy();
+                    
 
                 }
                 break;

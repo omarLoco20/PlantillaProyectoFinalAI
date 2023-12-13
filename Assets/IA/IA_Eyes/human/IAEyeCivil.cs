@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class IAEyeCivil : IAEyeBase
 {
-    
+    public int countSoldierView;
+    public int countCivilView;
+
     private void Start()
     {
         LoadComponent();
@@ -20,12 +22,67 @@ public class IAEyeCivil : IAEyeBase
     }
 
 
-    public override void UpdateScan()
+   
+
+    public virtual void UpdateScan()
     {
-        base.UpdateScan();
-        
+
+        if (Framerate > arrayRate[index])
+        {
+
+            index++;
+            index = index % arrayRate.Length;
+            this.Scan();
+            Framerate = 0;
+        }
+
+        Framerate += Time.deltaTime;
+
+        if (ViewEnemy != null && ((ViewEnemy.IsDead) || (!ViewEnemy.IsCantView)))
+        {
+            ViewEnemy = null;
+        }
 
     }
+
+    public override void Scan()
+    {
+        if (health.HurtingMe != null) return;
+        ViewAllie = null;
+        ViewEnemy = null;
+        Collider[] colliders = Physics.OverlapSphere(transform.position, mainDataView.Distance, mainDataView.Scanlayers);
+        CountEnemyView = 0;
+        count = colliders.Length;
+
+
+        float min_dist = 10000000000f;
+
+        for (int i = 0; i < count; i++)
+        {
+
+            GameObject obj = colliders[i].gameObject;
+
+            if (this.IsNotIsThis(this.gameObject, obj))
+            {
+
+                Health Scanhealth = obj.GetComponent<Health>();
+                if (Scanhealth != null &&
+                    obj.activeSelf &&
+                    !Scanhealth.IsDead &&
+                    Scanhealth.IsCantView &&
+                    mainDataView.IsInSight(Scanhealth.AimOffset))
+                {
+                    ExtractViewEnemy(ref min_dist, Scanhealth);
+                }
+
+            }
+
+
+
+        }
+
+    }
+
 
     private void OnValidate()
     {

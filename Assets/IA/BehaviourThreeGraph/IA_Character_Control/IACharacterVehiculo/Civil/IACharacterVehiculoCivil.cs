@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IACharacterVehiculoSoldier : IACharacterVehiculoHuman
+public class IACharacterVehiculoCivil : IACharacterVehiculo
 {
 
     public Vector3 normales;

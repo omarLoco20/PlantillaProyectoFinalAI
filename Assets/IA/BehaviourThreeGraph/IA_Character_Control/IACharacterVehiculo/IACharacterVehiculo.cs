@@ -61,8 +61,8 @@ public class IACharacterVehiculo : IACharacterControl
     }
     public virtual void MoveToAllied()
     {
-        if (AIEye.ViewAllie == null) return;
-        MoveToPosition(AIEye.ViewAllie.transform.position);
+      /*  if (AIEye.ViewAllie == null) return;
+        MoveToPosition(AIEye.ViewAllie.transform.position);*/
     }
 
 

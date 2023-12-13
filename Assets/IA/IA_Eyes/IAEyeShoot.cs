@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IAEyeShoot : IAEyeBase
+public class IAEyeShoot : IAEyeHuman
 {
     public DataView ShootDataView = new DataView();
 

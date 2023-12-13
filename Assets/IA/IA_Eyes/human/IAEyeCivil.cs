@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IAEyeCivil : IAEyeBase
+public class IAEyeCivil : IAEyeHuman
 {
-    public int countSoldierView;
-    public int countCivilView;
+   
 
     private void Start()
     {
@@ -72,7 +71,7 @@ public class IAEyeCivil : IAEyeBase
                     Scanhealth.IsCantView &&
                     mainDataView.IsInSight(Scanhealth.AimOffset))
                 {
-                    ExtractViewEnemy(ref min_dist, Scanhealth);
+                    base.ExtractViewEnemy(ref min_dist, Scanhealth);
                 }
 
             }

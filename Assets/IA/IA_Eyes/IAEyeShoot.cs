@@ -15,7 +15,14 @@ public class IAEyeShoot : IAEyeHuman
     public override void UpdateScan()
     {
         base.UpdateScan();
-         
+        if (ViewEnemy != null)
+        {
+            ShootDataView.IsInSight(ViewEnemy.AimOffset);
+        }
+        else
+        {
+            ShootDataView.Sight = false;
+        }
 
     }
      

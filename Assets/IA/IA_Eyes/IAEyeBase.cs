@@ -206,6 +206,9 @@ public class IAEyeBase : MonoBehaviour
     public DataView mainDataView = new DataView();
     public DataView RadioActionDataView = new DataView();
     public int CountEnemyView = 0;
+    public int CountSoldierView = 0;
+    public int CountCivilView = 0;
+
     #region Rate
     protected int index = 0;
     protected float[] arrayRate;
@@ -272,6 +275,7 @@ public class IAEyeBase : MonoBehaviour
     public virtual void LoadComponent()
     {
         health = GetComponent<Health>();
+       
         mainDataView.Owner = health;
         Framerate = 0;
         index = 0;
@@ -295,68 +299,34 @@ public class IAEyeBase : MonoBehaviour
         }
 
         Framerate += Time.deltaTime;
-
-       /* if (ViewEnemy != null && ((ViewEnemy.IsDead) || (!ViewEnemy.IsCantView)))
-        {
-            ViewEnemy = null;
-        }*/
+ 
 
     }
 
     public virtual void Scan()
     {
-        if (health.HurtingMe != null) return;
-       
-        ViewEnemy = null;
-        Collider[] colliders = Physics.OverlapSphere(transform.position, mainDataView.Distance, mainDataView.Scanlayers);
-        CountEnemyView = 0;
-        count = colliders.Length;
-
-        
-        float min_dist = 10000000000f;
-
-        for (int i = 0; i < count; i++)
-        {
-
-            GameObject obj = colliders[i].gameObject;
-            
-            if (this.IsNotIsThis(this.gameObject, obj))
-            {
-                
-                Health Scanhealth = obj.GetComponent<Health>();
-                if (Scanhealth != null &&
-                    obj.activeSelf &&
-                    !Scanhealth.IsDead &&
-                    Scanhealth.IsCantView &&
-                    mainDataView.IsInSight(Scanhealth.AimOffset))
-                {
-                    ExtractViewEnemy(ref min_dist, Scanhealth);
-                }
-
-            }
-
-
-
-        }
+         
 
     }
 
-    public void ExtractViewEnemy(ref float min_dist, Health _health)
+    public virtual void DataView()
     {
-        
-        if (!IsAllies(_health))
+        if (ViewEnemy != null && ((ViewEnemy.IsDead) || (!ViewEnemy.IsCantView)))
         {
-             
-            float dist = (transform.position - _health.transform.position).magnitude;
-            if (min_dist > dist)
-            {
-                ViewEnemy = _health;
-                min_dist = dist;
-                 
-            }
-            CountEnemyView++;
+            ViewEnemy = null;
         }
-       
+
+        if (ViewEnemy == null)
+        {
+
+            mainDataView.Sight = false;
+            RadioActionDataView.Sight = false;
+        }
+        else
+        if (ViewEnemy != null)
+        {
+            RadioActionDataView.IsInSight(ViewEnemy.AimOffset);
+        }
 
     }
 
@@ -377,6 +347,22 @@ public class IAEyeBase : MonoBehaviour
     {
 
         return (obj1.GetInstanceID() != obj2.GetInstanceID());
+    }
+
+    public virtual void ExtractViewEnemy(ref float min_dist, Health _health )
+    {
+
+       
+            float dist = (transform.position - _health.transform.position).magnitude;
+            if (min_dist > dist)
+            {
+                ViewEnemy = _health;
+                min_dist = dist;
+
+            }
+            CountEnemyView++;
+         
+
     }
 
 }

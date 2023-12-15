@@ -23,9 +23,8 @@ public class IAEyeSoldierShootAttack : IAEyeShootAttack
     public override void UpdateScan()
     {
         base.UpdateScan();
-        
-
     }
+
 
     private void OnValidate()
     {

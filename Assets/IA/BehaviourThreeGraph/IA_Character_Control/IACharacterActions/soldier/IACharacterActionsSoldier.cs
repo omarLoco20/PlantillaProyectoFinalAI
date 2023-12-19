@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IACharacterActionsSoldier : IACharacterActions
+public class IACharacterActionsSoldier : IACharacterActionsHuman
 {
 
     float FrameRate = 0;

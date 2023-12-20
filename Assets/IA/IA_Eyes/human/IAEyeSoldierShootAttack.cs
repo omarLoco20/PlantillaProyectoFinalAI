@@ -31,13 +31,13 @@ public class IAEyeSoldierShootAttack : IAEyeShootAttack
         mainDataView.CreateMesh();
         AttackDataView.CreateMesh();
         ShootDataView.CreateMesh();
-        RadioActionDataView.CreateMesh();
+        //RadioActionDataView.CreateMesh();
     }
     private void OnDrawGizmos()
     {
         mainDataView.OnDrawGizmos();
         AttackDataView.OnDrawGizmos();
         ShootDataView.OnDrawGizmos();
-        RadioActionDataView.OnDrawGizmos();
+        //RadioActionDataView.OnDrawGizmos();
     }
 }

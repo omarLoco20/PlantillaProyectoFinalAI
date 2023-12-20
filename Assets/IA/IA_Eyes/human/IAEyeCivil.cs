@@ -35,13 +35,13 @@ public class IAEyeCivil : IAEyeHuman
     {
         mainDataView.CreateMesh();
        
-        RadioActionDataView.CreateMesh();
+        //RadioActionDataView.CreateMesh();
     }
     private void OnDrawGizmos()
     {
         mainDataView.OnDrawGizmos();
        // AttackDataView.OnDrawGizmos();
        // ShootDataView.OnDrawGizmos();
-        RadioActionDataView.OnDrawGizmos();
+        //RadioActionDataView.OnDrawGizmos();
     }
 }

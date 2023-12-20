@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class IACharacterVehiculoCivil : IACharacterVehiculoHuman
 {
- 
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +36,12 @@ public class IACharacterVehiculoCivil : IACharacterVehiculoHuman
     public override void MoveToStrategy()
     {
         base.MoveToStrategy();
+    }
+
+    public void reproduccionCivil()
+    {
+        
+
     }
 
 

@@ -5,7 +5,8 @@ using BehaviorDesigner.Runtime.Tasks;
 [TaskCategory("MyAI/BaseClass")]
 public class ActionNodeVehicle : ActionNode
 {
-     
+
+    
 
     public override void OnStart()
     {

@@ -35,10 +35,10 @@ public class ActionNodeShoot : ActionNodeAction
 
                 break;
             case UnitGame.Soldier:
-                if (_IACharacterActions is IACharacterActionsSoldier)
-                {
-                    ((IACharacterActionsSoldier)_IACharacterActions).Shoot();
-                }
+                //if (_IACharacterActions is IACharacterActionsSoldier)
+                //{
+                //    ((IACharacterActionsSoldier)_IACharacterActions).Shoot();
+                //}
                 break;
             case UnitGame.None:
                 break;

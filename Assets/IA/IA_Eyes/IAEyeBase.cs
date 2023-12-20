@@ -204,7 +204,7 @@ public class IAEyeBase : MonoBehaviour
     protected int count = 0;
     // protected Collider[] colliders = new Collider[10];
     public DataView mainDataView = new DataView();
-    public DataView RadioActionDataView = new DataView();
+    //public DataView RadioActionDataView = new DataView();
     public int CountEnemyView = 0;
     public int CountSoldierView = 0;
     public int CountCivilView = 0;
@@ -320,13 +320,13 @@ public class IAEyeBase : MonoBehaviour
         {
 
             mainDataView.Sight = false;
-            RadioActionDataView.Sight = false;
+            //RadioActionDataView.Sight = false;
         }
-        else
-        if (ViewEnemy != null)
-        {
-            RadioActionDataView.IsInSight(ViewEnemy.AimOffset);
-        }
+        //else
+        //if (ViewEnemy != null)
+        //{
+        //    RadioActionDataView.IsInSight(ViewEnemy.AimOffset);
+        //}
 
     }
 

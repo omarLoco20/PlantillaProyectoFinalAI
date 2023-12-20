@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class IACharacterVehiculoZombie : IACharacterVehiculo
 {
+    public Transform destinoReproduccion;
+    public float DistanceReproducionRadius;
     
     // Start is called before the first frame update
     void Start()
@@ -32,6 +34,18 @@ public class IACharacterVehiculoZombie : IACharacterVehiculo
     public override void MoveToEvadEnemy()
     {
         base.MoveToEvadEnemy( );
+    }
+    public void MoveToPositionSpawn()
+    {
+        //-----
+        base.MoveToPosition(destinoReproduccion.position);
+    }
+    public bool EnterDestinoRepsoducion()
+    {
+        float distance = (transform.position - destinoReproduccion.position).magnitude;
+        if (distance < DistanceReproducionRadius)
+            return true;
+        return false;
     }
 
 }

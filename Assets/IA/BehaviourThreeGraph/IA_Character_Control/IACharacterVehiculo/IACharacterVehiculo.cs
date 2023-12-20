@@ -9,9 +9,13 @@ public class IACharacterVehiculo : IACharacterControl
 
 
     public float RangeWander;
-    Vector3 positionWander;
+    protected Vector3 positionWander;
     float FrameRate = 0;
     float Rate = 4;
+    public LayerMask maskNavMesh;
+
+   
+
     public override void LoadComponent()
     {
         base.LoadComponent();
@@ -79,11 +83,32 @@ public class IACharacterVehiculo : IACharacterControl
 
 
 
+    //Vector3 RandoWander(Vector3 position, float range)
+    //{
+    //    Vector3 randP = Random.insideUnitSphere * range;
+    //    Ray ray = new Ray(transform.position + new Vector3(randP.x,20,randP.z),Vector3.down);
+
+    //    RaycastHit hit;
+    //    if (Physics.Raycast(ray, out hit,100, maskNavMesh))
+    //    {
+    //        return hit.point;
+    //    }
+    //    return position;
+    //}
+
+
     Vector3 RandoWander(Vector3 position, float range)
     {
         Vector3 randP = Random.insideUnitSphere * range;
-        randP.y = transform.position.y;
-        return position + randP;
+        Ray rayo = new Ray(transform.position + new Vector3(randP.x, 20, randP.z), Vector3.down * 50);
+        RaycastHit hit;
+
+        if (Physics.Raycast(rayo, out hit, 100, maskNavMesh))
+        {
+            return hit.point;
+
+        }
+        return position;
     }
     public virtual void MoveToWander()
     {
@@ -103,7 +128,32 @@ public class IACharacterVehiculo : IACharacterControl
         }
         FrameRate += Time.deltaTime;
 
-
+        
         MoveToPosition(positionWander);
     }
+
+
+ 
+    /*
+    public  bool isFertil(int n)
+    {
+        int random = Random.Range(0, n);
+        
+        for(int z=n; z >= 0; z--)
+        {
+
+        }
+
+        if (n <= 0)
+        {
+            return true;
+        }
+        else 
+        {
+            return false;
+        }
+        
+    }
+
+   */
 }

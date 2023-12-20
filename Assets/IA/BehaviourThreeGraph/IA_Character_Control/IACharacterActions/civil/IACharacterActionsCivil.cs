@@ -5,7 +5,10 @@ using UnityEngine.AI;
 
 public class IACharacterActionsCivil : IACharacterActionsHuman
 {
-   // NavMesh
+    // NavMesh
+
+    bool isFertil = false;
+    int contadorDeCambioFertil;
      void Start()
     {
         this.LoadComponent();

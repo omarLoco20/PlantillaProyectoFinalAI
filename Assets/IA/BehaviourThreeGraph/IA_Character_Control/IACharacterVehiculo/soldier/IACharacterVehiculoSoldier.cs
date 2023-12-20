@@ -39,6 +39,8 @@ public class IACharacterVehiculoSoldier : IACharacterVehiculoHuman
         base.MoveToStrategy();
     }
 
+
+    
     private void OnDrawGizmos()
     {
         base.DrawGizmos();

@@ -7,7 +7,11 @@ public class IACharacterActionsSoldier : IACharacterActionsHuman
 
     float FrameRate = 0;
     public float Rate=1;
-
+    public int damage = 1;
+    private void Start()
+    {
+        LoadComponent();
+    }
     public override void LoadComponent()
     {
         base.LoadComponent();
@@ -15,19 +19,15 @@ public class IACharacterActionsSoldier : IACharacterActionsHuman
     }
     public void Attack()
     {
-        if(FrameRate>Rate)
+        if (FrameRate > Rate)
         {
             FrameRate = 0;
-            Debug.Log("Attack "+Time.time);
+            AIEye.ViewEnemy.Damage(damage, this.health);
+            Debug.Log("Attack " + Time.time);
         }
         FrameRate += Time.deltaTime;
 
 
     }
-    public void Shoot()
-    {
-        
-            Debug.Log("Shoot " + Time.time);
-        
-    }
+    
 }

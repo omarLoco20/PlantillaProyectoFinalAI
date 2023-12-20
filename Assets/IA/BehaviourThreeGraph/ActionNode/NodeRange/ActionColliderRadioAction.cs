@@ -14,8 +14,8 @@ public class ActionColliderRadioAction : ActionNodeRange
         if(_IACharacterVehiculo.AIEye.ViewEnemy==null)
           return TaskStatus.Failure;
         IAEyeBase _IAEyeBase = ((IAEyeBase)_IACharacterVehiculo.AIEye);
-        if (_IAEyeBase != null && _IAEyeBase.RadioActionDataView.Sight)
-            return TaskStatus.Success;
+        //if (_IAEyeBase != null && _IAEyeBase.RadioActionDataView.Sight)
+        //    return TaskStatus.Success;
 
         return TaskStatus.Failure;
     }

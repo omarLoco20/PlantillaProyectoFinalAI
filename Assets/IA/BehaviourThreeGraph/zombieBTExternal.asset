@@ -20,15 +20,24 @@ MonoBehaviour:
       parentIndex: 
       startIndex: 
       variableStartIndex: 
-      JSONSerialization: '{"EntryTask":{"Type":"BehaviorDesigner.Runtime.Tasks.EntryTask","NodeData":{"Offset":"(78,7)"},"ID":0,"Name":"Entry","Instant":true},"RootTask":{"Type":"BehaviorDesigner.Runtime.Tasks.Repeater","NodeData":{"Offset":"(-2,117)"},"ID":1,"Name":"Repeater","Instant":true,"SharedIntcount":{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":null,"Int32mValue":0},"SharedBoolrepeatForever":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"SharedBoolendOnFailure":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false},"Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Selector","NodeData":{"Offset":"(-4.859604,191.8139)"},"ID":2,"Name":"Selector","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-973.1228,138.002991)"},"ID":3,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"ActionNodeNotViewEnemy","NodeData":{"Offset":"(-243.799438,146.599609)"},"ID":4,"Name":"Action
-        Node Not View Enemy","Instant":true},{"Type":"ActionWander","NodeData":{"Offset":"(52.200428,162.599625)"},"ID":5,"Name":"Action
-        Wander","Instant":true}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-428.335083,164.2179)"},"ID":6,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"ActionNodeViewEnemy","NodeData":{"Offset":"(-209.0002,124.702156)"},"ID":7,"Name":"Action
-        Node View Enemy","Instant":true},{"Type":"ActionNotColliderAttack","NodeData":{"Offset":"(-8.990143,130.310547)"},"ID":8,"Name":"Action
-        Not Collider Attack","Instant":true},{"Type":"ActionFollowEnemy","NodeData":{"Offset":"(200.752914,125.270447)"},"ID":9,"Name":"Action
-        Follow Enemy","Instant":true}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(207.193787,170.540649)"},"ID":10,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"ActionNodeViewEnemy","NodeData":{"Offset":"(-169.639984,116.8468)"},"ID":11,"Name":"Action
-        Node View Enemy","Instant":true},{"Type":"ActionColliderAttack","NodeData":{"Offset":"(37.451355,117.795959)"},"ID":12,"Name":"Action
-        Collider Attack","Instant":true},{"Type":"ActionNodeAttack","NodeData":{"Offset":"(216.521149,117.795959)"},"ID":13,"Name":"Action
-        Node Attack","Instant":true}]}]}]}}'
+      JSONSerialization: '{"EntryTask":{"Type":"BehaviorDesigner.Runtime.Tasks.EntryTask","NodeData":{"Offset":"(78,7)"},"ID":0,"Name":"Entry","Instant":true},"RootTask":{"Type":"BehaviorDesigner.Runtime.Tasks.Repeater","NodeData":{"Offset":"(-2,117)"},"ID":1,"Name":"Repeater","Instant":true,"SharedIntcount":{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":null,"Int32mValue":0},"SharedBoolrepeatForever":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"SharedBoolendOnFailure":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false},"Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Selector","NodeData":{"Offset":"(-0.314163685,194.086609)"},"ID":2,"Name":"Selector","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-973.1228,138.002991)"},"ID":3,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"ActionNotReproducion","NodeData":{"Offset":"(-328.3416,166.276367)"},"ID":4,"Name":"Action
+        Not Reproducion","Instant":true},{"Type":"ActionNodeNotViewEnemy","NodeData":{"Offset":"(-129.51355,166.242508)"},"ID":5,"Name":"Action
+        Node Not View Enemy","Instant":true},{"Type":"ActionWander","NodeData":{"Offset":"(52.200428,162.599625)"},"ID":6,"Name":"Action
+        Wander","Instant":true}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-428.335083,164.2179)"},"ID":7,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"ActionNotReproducion","NodeData":{"Offset":"(-364.795837,265.061768)"},"ID":8,"Name":"Action
+        Not Reproducion","Instant":true},{"Type":"ActionNodeViewEnemy","NodeData":{"Offset":"(-187.57164,265.178284)"},"ID":9,"Name":"Action
+        Node View Enemy","Instant":true},{"Type":"ActionNotColliderAttack","NodeData":{"Offset":"(-11.3710957,268.4057)"},"ID":10,"Name":"Action
+        Not Collider Attack","Instant":true},{"Type":"ActionFollowEnemy","NodeData":{"Offset":"(160.276749,268.1275)"},"ID":11,"Name":"Action
+        Follow Enemy","Instant":true}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(207.193787,170.540649)"},"ID":12,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"ActionNotReproducion","NodeData":{"Offset":"(-258.556427,258.441833)"},"ID":13,"Name":"Action
+        Not Reproducion","Instant":true},{"Type":"ActionNodeViewEnemy","NodeData":{"Offset":"(-76.7829,247.7991)"},"ID":14,"Name":"Action
+        Node View Enemy","Instant":true},{"Type":"ActionColliderAttack","NodeData":{"Offset":"(99.3560944,253.510162)"},"ID":15,"Name":"Action
+        Collider Attack","Instant":true},{"Type":"ActionNodeAttack","NodeData":{"Offset":"(271.28302,251.129211)"},"ID":16,"Name":"Action
+        Node Attack","Instant":true}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(879.0338,143.814392)"},"ID":17,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"ActionIsReproducion","NodeData":{"Offset":"(-108.019348,183.32428)"},"ID":18,"Name":"Action
+        Is Reproducion","Instant":true},{"Type":"ActionNotColliderDestinoReproducion","NodeData":{"Offset":"(117.793304,177.6958)"},"ID":19,"Name":"Action
+        Not Collider Destino Reproducion","Instant":true},{"Type":"ActionMoveSpawn","NodeData":{"Offset":"(328.257019,178.771179)"},"ID":20,"Name":"Action
+        Move Spawn","Instant":true}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(1550.14673,178.814331)"},"ID":21,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"ActionIsReproducion","NodeData":{"Offset":"(-122.579712,142.80719)"},"ID":22,"Name":"Action
+        Is Reproducion","Instant":true},{"Type":"ActionColliderDestinoReproducion","NodeData":{"Offset":"(106.030319,142.105026)"},"ID":23,"Name":"Action
+        Collider Destino Reproducion","Instant":true},{"Type":"ActionSpawnReproducion","NodeData":{"Offset":"(344.2148,150.226379)"},"ID":24,"Name":"Action
+        Spawn Reproducion","Instant":true}]}]}]}}'
       fieldSerializationData:
         typeName: []
         fieldNameHash: 

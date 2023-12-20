@@ -99,9 +99,19 @@ public class IACharacterVehiculoHuman : IACharacterVehiculo
         Debug.Log("ColliderWall " + normales);
     }
 
+     
+
+
+
+
     public void DrawGizmos()
     {
         if (health == null) return;
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(transform.position, positionWander);
+        
+        Gizmos.DrawSphere(positionWander, 1.7f);
 
         Ray[] arrayRay = new Ray[3];
         arrayRay[0] = new Ray(health.AimOffset.position, health.AimOffset.right);

@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8621445132655829443}
   - component: {fileID: 7111501099431860540}
-  m_Layer: 12
+  - component: {fileID: 9138948767785667764}
+  - component: {fileID: 1740072008559625671}
+  m_Layer: 10
   m_Name: hoja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,16 +47,64 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c4a87db6f39bae47beb34e40eeb9d62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinRate: 60
-  MaxRate: 70
+  MinRate: 20
+  MaxRate: 25
   eventInvoke:
     m_PersistentCalls:
       m_Calls: []
   layerCollider:
     serializedVersion: 2
     m_Bits: 128
-  Infinity: 0
+  Infinity: 1
   Food: 20
+--- !u!65 &9138948767785667764
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22284946104571160}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.1276398, y: 0.3083253, z: 1}
+  m_Center: {x: -0.008201599, y: 0.07212663, z: 0}
+--- !u!54 &1740072008559625671
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22284946104571160}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1130118161208587906
 GameObject:
   m_ObjectHideFlags: 0
@@ -66,8 +116,7 @@ GameObject:
   - component: {fileID: 4198873100185545956}
   - component: {fileID: 8157668754732305920}
   - component: {fileID: 8101383236686876740}
-  - component: {fileID: 2524411123453441957}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: hojasComida
   m_TagString: hojitasTag
   m_Icon: {fileID: 0}
@@ -139,24 +188,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2524411123453441957
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1130118161208587906}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}

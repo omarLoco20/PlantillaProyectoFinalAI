@@ -18,9 +18,11 @@ public class ActionNodeViewItem : ActionNodeView
             IAEyeHuman _IAEyeHuman = (IAEyeHuman)((IACharacterVehiculoHuman)_IACharacterVehiculo).AIEye;
             if (_IAEyeHuman.Item != null)
             {
+                Debug.Log("entro ");
                 return TaskStatus.Success;
             }
         }
+        Debug.Log("no entro ");
 
         return TaskStatus.Failure;
 

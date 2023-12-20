@@ -228,7 +228,7 @@ public class IAEyeBase : MonoBehaviour
    // public Health ViewAllie;// { get; set; }
 
     public Vector3 Target { get; set; }
-
+    public DataView RadioActionDataView = new DataView();
    
     
 

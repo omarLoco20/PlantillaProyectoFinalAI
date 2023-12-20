@@ -10,6 +10,8 @@ public class IACharacterControl : MonoBehaviour
     public Health health { get; set; }
     public IAEyeBase AIEye { get; set; }
 
+    
+
   //  public zombieReproduccion {get; set;}
 
     public virtual void LoadComponent()

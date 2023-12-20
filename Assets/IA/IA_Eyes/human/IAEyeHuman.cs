@@ -8,7 +8,7 @@ public class IAEyeHuman : IAEyeBase
     public int countSoldierView;
     public int countCivilView;
     public Health ViewAllie;
-    
+    public Item Item;
 
      
     public override void LoadComponent()

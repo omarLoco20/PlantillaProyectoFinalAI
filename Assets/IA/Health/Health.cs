@@ -9,6 +9,7 @@ public enum UnitGame
     Zombie,
     Soldier,
     Civil,
+    Hoja,
     None
 }
 public enum StateAnt

@@ -224,6 +224,7 @@ public class IAEyeBase : MonoBehaviour
     public bool IsDrawGizmo = false;
     public Transform AimOffset;
     public Health ViewEnemy;
+    public Health ViewHoja;
    // public Health ViewAllie;// { get; set; }
 
     public Vector3 Target { get; set; }

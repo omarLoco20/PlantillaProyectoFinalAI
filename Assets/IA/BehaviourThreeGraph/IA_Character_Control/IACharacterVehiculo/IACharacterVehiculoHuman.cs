@@ -5,6 +5,7 @@ using UnityEngine;
 public class IACharacterVehiculoHuman : IACharacterVehiculo
 {
     protected Vector3 normales;
+    public Item Item;
 
     public override void LoadComponent()
     {
@@ -99,8 +100,16 @@ public class IACharacterVehiculoHuman : IACharacterVehiculo
         Debug.Log("ColliderWall " + normales);
     }
 
-     
 
+    public virtual void MoveToItem()
+    {
+        if (AIEye is IAEyeHuman)
+        {
+            if (((IAEyeHuman)AIEye).Item == null) return;
+            LookPosition(((IAEyeHuman)AIEye).Item.transform.position);
+            MoveToPosition(((IAEyeHuman)AIEye).Item.transform.position);
+        }
+    }
 
 
 
